@@ -16,12 +16,12 @@ module Ruboty
       def bento(message)
         case message[:vendor]
         when "azuma" then
-          message.reply("* 今日のメニュー（あづま給食） * \n>>>" + get_azuma_menu)
+          message.reply("*今日のメニュー（あづま給食）* \n>>>" + get_azuma_menu)
         when "tamagoya" then
-          message.reply("* 今日のメニュー（玉子屋） * \n>>>" + get_tamagoya_menu)
+          message.reply("*今日のメニュー（玉子屋）* \n>>>" + get_tamagoya_menu)
         else
-          message.reply("* 今日のメニュー（あづま給食） * \n>>>" + get_azuma_menu)
-          message.reply("* 今日のメニュー（玉子屋） * \n>>>" + get_tamagoya_menu)
+          message.reply("*今日のメニュー（あづま給食）* \n>>>" + get_azuma_menu)
+          message.reply("*今日のメニュー（玉子屋）* \n>>>" + get_tamagoya_menu)
         end
       end
 
