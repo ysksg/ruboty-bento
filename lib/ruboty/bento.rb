@@ -18,10 +18,10 @@ module Ruboty
         when "azuma" then
           message.reply("* 今日のメニュー（あづま給食） * \n>>>" + get_azuma_menu)
         when "tamagoya" then
-          message.reply("* 今日のメニュー（玉子屋） * \n>>>"get_taagoya_menu)
+          message.reply("* 今日のメニュー（玉子屋） * \n>>>" + get_tamagoya_menu)
         else
           message.reply("* 今日のメニュー（あづま給食） * \n>>>" + get_azuma_menu)
-          message.reply("* 今日のメニュー（玉子屋） * \n>>>"get_taagoya_menu)
+          message.reply("* 今日のメニュー（玉子屋） * \n>>>" + get_tamagoya_menu)
         end
       end
 
@@ -72,7 +72,7 @@ module Ruboty
           today_menu_element = all_menu_element[menu_index]
 
           menu = today_menu_element.css('li').map{|m| m.text}.join("\n")
-          cal = today_menu_element.css('p.menu_calorie')[menu_index].text
+          cal = today_menu_element.css('p.menu_calorie').text
 
           return menu + "\n" + cal
         end
@@ -82,3 +82,4 @@ module Ruboty
 
     end
   end
+end
